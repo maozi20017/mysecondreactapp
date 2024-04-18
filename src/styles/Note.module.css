@@ -1,0 +1,10 @@
+/* style for accordion items */
+.notes_item {
+	display: flex;
+	z-index: 100;
+	padding: 2%;
+	/* border-bottom: 1px solid #4e7b48; */
+	font-size: larger;
+	margin: 2%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.container:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sidebar {
+  float: left;
+  width: 20%;
+  background-color: #000000;
+}
+.content {
+  float:left;
+  width: 80%;
+  background-color: #ffffff;
+  padding: 10px;
+}

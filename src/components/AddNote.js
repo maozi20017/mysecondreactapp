@@ -1,30 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/AddNote.module.css";
 function AddNote(props) {
+  const [title, setTitle] = useState("");
+  const [des, setDes] = useState("");
   const titleHandler = (event) => {
-    const name = event.target.value;
-    props.onSetTitle(name);
+    setTitle(event.target.value);
   };
   const desHandler = (event) => {
-    const name = event.target.value;
-    props.onSetDes(name);
+    setDes(event.target.value);
   };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.onSubmit(event, title, des, setTitle, setDes); // 將 title 和 des 作為參數傳遞給 props.onSubmit
+    setTitle("");
+    setDes("");
+  };
+
   return (
     <div className={styles.add}>
       <h3>Add Notes</h3>
-      <form onSubmit={props.handleSubmit}>
+      <form onSubmit={handleSubmit} method="POST">
         <input
           type="text"
           id="title"
           placeHolder="新增標題"
-          value={props.title}
+          value={title}
           onChange={titleHandler}
         ></input>
         <input
           type="text"
           id="description"
           placeholder="筆記"
-          value={props.des}
+          value={des}
           onChange={desHandler}
         ></input>
         <button type="submit">提交</button>

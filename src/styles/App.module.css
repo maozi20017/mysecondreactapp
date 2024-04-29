@@ -87,3 +87,23 @@ button {
 	border-bottom: 1px solid #ddd;
 	font-size: larger;
 }
+
+/* 包含兩個欄位的容器 */
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sidebar {
+    float: left;
+    width: 20%;
+    background-color: #000000;
+	color:#ffffff;
+}
+.content {
+    float:left;
+    width: 80%;
+    background-color: #e2e6be;
+    padding: 10px;
+}

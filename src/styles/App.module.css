@@ -1,16 +1,3 @@
-.h1 {
-    color: rgb(139, 255, 211);
-    font-size: 4em;
-    font-family: "Comic Sans MS", Lucida Handwriting, cursive;
-    margin: 0;
-}
-
-/* App.css*/
-
-.App {
-	text-align: center;
-}
-
 /* Styling universal selector */
 * {
 	/* margin-top: 50px; */
@@ -30,28 +17,6 @@ body {
 	justify-content: center;
 	background: hsl(0, 0%, 100%);
 	font-family: "Poppins", sans-serif;
-}
-
-/* Styling card container */
-.card {
-	/* min-height: 50vh; */
-	height: fit-content;
-	min-width: 33rem;
-	max-width: 40rem;
-	background: rgba(147, 208, 119, 1);
-	margin: 0 1rem;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-	width: 100%;
-}
-
-.head {
-	position: relative;
-	max-height: fit-content;
-	min-width: 33rem;
-	width: 100%;
-	background: rgb(109, 157, 87);
-
-	padding: 1rem;
 }
 
 input {
@@ -76,34 +41,23 @@ button {
 	background-color: rgb(109, 157, 87);
 }
 
-/* style accordion */
-.notes {
-	margin: 5%;
-	text-align: left;
-}
-
 /* style for accordion items */
 .accordion-item {
 	border-bottom: 1px solid #ddd;
 	font-size: larger;
 }
 
-/* 包含兩個欄位的容器 */
-.container:after {
-    content: "";
-    display: table;
-    clear: both;
+.container {
+    display: flex;
 }
 
-.sidebar {
-    float: left;
-    width: 20%;
+.sidebar{
+    flex: 0 0 20%;
     background-color: #000000;
-	color:#ffffff;
 }
+
 .content {
-    float:left;
-    width: 80%;
+    flex: 1;
     background-color: #e2e6be;
     padding: 10px;
 }

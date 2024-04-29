@@ -1,4 +1,4 @@
-import styles from "../styles/App.module.css";
+import styles from "../styles/NotePage.css";
 
 import { useState, useEffect } from "react";
 import Data from "../Data"; // 匯入資料

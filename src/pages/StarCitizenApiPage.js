@@ -1,4 +1,3 @@
-import styles from "../styles/App.module.css";
 import React, { useState } from "react";
 import StarCitizenApi from "../components/StarCitizenApi";
 function StarCitizenApiPage() {
@@ -27,7 +26,24 @@ function StarCitizenApiPage() {
     fetchPost();
   };
 
-  return <StarCitizenApi onSearch={handleSearch} />;
+  return (
+    <div>
+      <StarCitizenApi onSearch={handleSearch} />
+      {searchResult && (
+        <div>
+          <h2>Search Result:</h2>
+          <pre>{JSON.stringify(searchResult, null, 2)}</pre>
+          <ul>
+            <li>profile:{searchResult.data.profile.page.url}</li>
+            <li>加入時間:{searchResult.data.profile.enlisted}</li>
+            <li>
+              <img src={searchResult.data.profile.image} alt="玩家圖片"></img>
+            </li>
+          </ul>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default StarCitizenApiPage;
